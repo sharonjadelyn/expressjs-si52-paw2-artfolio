@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "35bd8508-9d4f-48ad-a7a2-bd555a591ff3",
+		"name": "artwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47489836"
+	},
+	"item": [
+		{
+			"name": "createartwork",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjk0MmE1OWUwMGUwMjBlOGE3M2ZlY2I2IiwidXNlcm5hbWUiOiJsYWxhIiwiaWF0IjoxNzY1OTc1NTY2LCJleHAiOjE3NjU5NzY0NjZ9.ixf4nq2PYbxNnzdNSNmpSNDD-DAfZT6j_shXWEV97qQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Patung Garuda\",\r\n  \"description\": \"Patung garuda berbahan kayu jati dengan ukiran tradisional\",\r\n  \"image\": \"https://example.com/patung-garuda.jpg\",\r\n  \"category\": \"Sculpture\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/artworks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"artworks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"lala\",\r\n    \"email\": \"lala@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"lala\",\r\n    \"email\": \"lala@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listartwork",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjk0MmE1OWUwMGUwMjBlOGE3M2ZlY2I2IiwidXNlcm5hbWUiOiJsYWxhIiwiaWF0IjoxNzY1OTc1NTY2LCJleHAiOjE3NjU5NzY0NjZ9.ixf4nq2PYbxNnzdNSNmpSNDD-DAfZT6j_shXWEV97qQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/artworks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"artworks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detailartwork",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjk0MmE1OWUwMGUwMjBlOGE3M2ZlY2I2IiwidXNlcm5hbWUiOiJsYWxhIiwiaWF0IjoxNzY1OTc1NTY2LCJleHAiOjE3NjU5NzY0NjZ9.ixf4nq2PYbxNnzdNSNmpSNDD-DAfZT6j_shXWEV97qQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/artworks/6942a6fb337466b12d6bd95b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"artworks",
+						"6942a6fb337466b12d6bd95b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateartwork",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjk0MmE1OWUwMGUwMjBlOGE3M2ZlY2I2IiwidXNlcm5hbWUiOiJsYWxhIiwiaWF0IjoxNzY1OTc1NTY2LCJleHAiOjE3NjU5NzY0NjZ9.ixf4nq2PYbxNnzdNSNmpSNDD-DAfZT6j_shXWEV97qQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Indonesia\",\r\n  \"description\": \"Patung garuda berbahan kayu jati dengan ukiran tradisional\",\r\n  \"image\": \"https://example.com/patung-garuda.jpg\",\r\n  \"category\": \"3D\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/artworks/6942a6fb337466b12d6bd95b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"artworks",
+						"6942a6fb337466b12d6bd95b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteartwork",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjk0MmE1OWUwMGUwMjBlOGE3M2ZlY2I2IiwidXNlcm5hbWUiOiJsYWxhIiwiaWF0IjoxNzY1OTc1NTY2LCJleHAiOjE3NjU5NzY0NjZ9.ixf4nq2PYbxNnzdNSNmpSNDD-DAfZT6j_shXWEV97qQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/artworks/6942a6fb337466b12d6bd95b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"artworks",
+						"6942a6fb337466b12d6bd95b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
