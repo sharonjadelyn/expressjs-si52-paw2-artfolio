@@ -35,7 +35,7 @@ export const addNewArtwork = async (req,res) => {
         }
 
         //Menyimpan user_id pembuat ke database
-        const artworks = await ArtworkModel.create({title, description, image, createdBy: req.user?.user_id});
+        const artworks = await ArtworkModel.create({title, description, image, category, createdBy: req.user?.user_id});
 
         res.status(201).json({
             message: "Berhasil menambahkan karya baru",
@@ -84,7 +84,7 @@ export const updateArtwork = async (req,res) => {
         const { id } = req.params;
         const { title, description, image, category } = req.body;
 
-        if(!id || mongoose.Types.ObjectId.isValid(id)){
+        if(!id || !mongoose.Types.ObjectId.isValid(id)){
             return res.status(400).json({ message: "ID tidak valid", data: null });
         }
 
