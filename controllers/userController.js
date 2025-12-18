@@ -58,6 +58,14 @@ export const signUp = async (req, res) => {
             });
         }
 
+        const existingUser = await UserModel.findOne({ email });
+        if (existingUser) {
+            return res.status(400).send({
+                error: "Email sudah terdaftar",
+                data: null
+            });
+        }
+        
         //Enkripsi password
         const hashPassword = await hashedPassword(password);
 
