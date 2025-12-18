@@ -6,7 +6,7 @@ export const artworks = async (req,res) => {
     try {
         const artworks = await ArtworkModel.find({
             createdBy : req.user?.user_id
-        }).sort({ createdAt : -1});
+        }).populate("createdBy", "username").sort({ createdAt : -1});
 
         return res.status(200).json({
             message : "Daftar semua Karya Seni",
@@ -62,7 +62,7 @@ export const detailArtwork= async (req,res) => {
         const artworks = await ArtworkModel.findOne({
             _id : id,
             createdBy : req.user?.user_id
-        });
+        }).populate("createdBy", "username");
 
         if(!artworks){
             return res.status(404).json({ message: "Karya tidak ditemukan", data: null});
